@@ -15,8 +15,13 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+# from django.db.models.loading import cache as model_cache
+
+# if not model_cache.loaded:
+#     model_cache.get_models()
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^polls/', include('polls.urls'))
+    url(r'^polls/', include('polls.urls')),
+    url(r'^blog/', include('blog.urls')),
 ]

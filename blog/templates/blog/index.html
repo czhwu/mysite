@@ -1,0 +1,17 @@
+{% extends 'blog/base.html' %}
+{% block title %}
+    BlogHome
+{% endblock %}
+{% block content %}
+{% if post_list %}
+    <ul>
+    {% for post in post_list %}
+{#        todo:添加详情页连接#}
+        <li><h2><a href="#">{{ post.title }}</a></h2>  {{ post.pub_date }}
+        <p>{{ post.body }}</p>
+        </li>
+    {% endfor %}
+    </ul>
+
+{% endif %}
+{% endblock %}

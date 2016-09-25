@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}
+    Title
+    {% endblock %}</title>
+</head>
+<body>
+<a href="{% url 'index' %}"><h1>czhwu'site</h1></a>
+{% block content %}
+<h1 style="text-align: center;">Welcome to czhwu'blog.</h1>
+{% endblock %}
+</body>
+</html>
