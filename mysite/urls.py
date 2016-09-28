@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+# from blog import views
 # from django.db.models.loading import cache as model_cache
 
 # if not model_cache.loaded:
@@ -24,4 +25,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^polls/', include('polls.urls')),
     url(r'^blog/', include('blog.urls')),
+    # url(r'^$', include('blog.urls')),
 ]
