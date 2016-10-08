@@ -18,3 +18,9 @@ def detail(request, post_id):
     context = {'post': post}
 
     return render(request, 'blog/detail.html', context)
+
+
+def marqueen(request):
+    post_list = Post.objects.order_by('-pub_date')
+    context = {'post_list': post_list}
+    return render(request, 'blog/marqueen.html', context)

@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'polls.apps.PollsConfig',
     'blog.apps.BlogConfig',
     'assets.apps.AssetsConfig',
+    'demo.apps.DemoConfig',
 
     'taggit',
 ]
