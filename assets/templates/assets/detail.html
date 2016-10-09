@@ -1,0 +1,39 @@
+{% extends 'assets/base.html' %}
+{% block title %}
+资产管理
+{% endblock %}
+{% block content %}
+    <marquee direction="up" onMouseOver="this.stop()" onMouseOut="this.start()">
+    <div style="height: 500px;">
+    <table class="table">
+        <tr>
+            <th>序号</th>
+            <th>资产编号</th>
+            <th>资产描述</th>
+            <th>附加资产描述</th>
+            <th>入账日期</th>
+            <th>成本中心文本</th>
+            <th>数量</th>
+            <th>保管员</th>
+            <th>备注</th>
+        </tr>
+{#    todo:取数据并展示#}
+        {% for asset in assets_list %}
+            <tr>
+            <td>#</td> {# todo:添加序号 #}
+            <td>{{ asset.gdzc }}</td>
+            <td>{{ asset.name }}</td>
+            <td>{{ asset.discription }}</td>
+            <td>{{ asset.add_date }}</td>
+            <td>{{ asset.dpt }}</td>
+            <td>1</td>
+            <td>{{ asset.user }}</td>
+            <td>#</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+
+    </div>
+    </marquee>
+{% endblock %}

@@ -26,4 +26,5 @@ urlpatterns = [
     url(r'^polls/', include('polls.urls')),
     url(r'^blog/', include('blog.urls')),
     # url(r'^$', include('blog.urls')),
+    url(r'^assets/', include('assets.urls')),
 ]
